@@ -1,0 +1,181 @@
+/* ============================================
+   ABOUT PAGE
+   ============================================ */
+
+.about-hero {
+  background: linear-gradient(135deg, #0D0D0D 0%, #161006 100%);
+}
+
+/* ---- Story Section ---- */
+.about-story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.about-story-visual {
+  position: relative;
+  height: 520px;
+}
+
+.about-story-img {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+}
+
+.about-story-accent {
+  position: absolute;
+  bottom: -var(--space-5);
+  right: -var(--space-5);
+  width: 200px;
+  height: 280px;
+  border-radius: var(--radius-lg);
+  right: calc(-1 * var(--space-5));
+  bottom: calc(-1 * var(--space-5));
+}
+
+/* ---- Values ---- */
+.about-values-section {
+  background: var(--color-surface);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+.value-card {
+  transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+}
+
+.value-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-gold);
+}
+
+.value-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: var(--space-5);
+}
+
+/* ---- Team ---- */
+.about-team-section {
+  background: var(--color-bg);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.team-card {
+  text-align: center;
+}
+
+.team-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: var(--radius-full);
+  margin: 0 auto var(--space-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-border-strong);
+}
+
+.team-initials {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+.team-role {
+  font-size: var(--text-sm);
+  color: var(--color-gold);
+  margin-bottom: var(--space-3);
+  font-style: italic;
+}
+
+.team-bio {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ---- Awards ---- */
+.about-awards-section {
+  background: var(--color-surface);
+}
+
+.awards-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+.award-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.award-item:hover {
+  border-color: var(--color-border-strong);
+  background: var(--color-surface-3);
+}
+
+.award-year {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  min-width: 56px;
+}
+
+.award-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--color-border);
+  flex-shrink: 0;
+}
+
+.award-info {
+  flex: 1;
+}
+
+.award-trophy {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .values-grid { grid-template-columns: repeat(2, 1fr); }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .about-story-grid { grid-template-columns: 1fr; }
+  .about-story-visual { height: 300px; }
+  .values-grid { grid-template-columns: 1fr 1fr; }
+  .award-item { flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+  .values-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}

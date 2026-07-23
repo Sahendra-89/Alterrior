@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "10 Timeless Interior Design Principles Every Homeowner Should Know",
+    "slug": "timeless-interior-design-principles",
+    "category": "Design Tips",
+    "date": "2024-12-15",
+    "readingTime": "7 min read",
+    "excerpt": "From the golden ratio to the rule of three, discover the foundational principles that separate good design from extraordinary spaces that stand the test of time.",
+    "color": "#2C3B4A",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "The Complete Guide to Choosing the Right Marble for Your Home",
+    "slug": "choosing-right-marble-home",
+    "category": "Materials",
+    "date": "2024-11-28",
+    "readingTime": "9 min read",
+    "excerpt": "Carrara, Calacatta, Statuario — navigating the world of natural marble can be overwhelming. Our expert guide demystifies stone selection for every budget.",
+    "color": "#3A3228",
+    "featured": false
+  },
+  {
+    "id": 3,
+    "title": "Biophilic Design: Bringing Nature Into Your Living Space",
+    "slug": "biophilic-design-living-space",
+    "category": "Trends",
+    "date": "2024-11-10",
+    "readingTime": "6 min read",
+    "excerpt": "Science confirms what great designers have always known — nature in our spaces makes us calmer, more creative, and happier. Here's how to do it well.",
+    "color": "#2C3828",
+    "featured": false
+  },
+  {
+    "id": 4,
+    "title": "Dark Interiors: How to Pull Off the Bold Aesthetic Without Losing Light",
+    "slug": "dark-interiors-bold-aesthetic",
+    "category": "Design Tips",
+    "date": "2024-10-22",
+    "readingTime": "8 min read",
+    "excerpt": "Dark rooms can be moody, dramatic, and deeply sophisticated — or they can feel cave-like and oppressive. The difference is all in the execution.",
+    "color": "#1C1C28",
+    "featured": false
+  },
+  {
+    "id": 5,
+    "title": "Kitchen Renovation ROI: Which Upgrades Add the Most Value",
+    "slug": "kitchen-renovation-roi",
+    "category": "Renovation",
+    "date": "2024-10-05",
+    "readingTime": "5 min read",
+    "excerpt": "Planning a kitchen remodel? Not all investments are created equal. We break down which upgrades deliver the highest return when it's time to sell.",
+    "color": "#3A2820",
+    "featured": false
+  },
+  {
+    "id": 6,
+    "title": "The Art of Layered Lighting: A Room-by-Room Breakdown",
+    "slug": "art-of-layered-lighting",
+    "category": "Lighting",
+    "date": "2024-09-18",
+    "readingTime": "7 min read",
+    "excerpt": "Lighting is the one element that can single-handedly make or break a space. Master the three-layer approach and watch your interiors come alive.",
+    "color": "#2D2418",
+    "featured": false
+  }
+]

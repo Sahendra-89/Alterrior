@@ -1,0 +1,183 @@
+/* ============================================
+   ALTERA INTERIOR — LAYOUT UTILITIES
+   ============================================ */
+
+/* ---- Container ---- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+}
+
+.container-wide {
+  width: 100%;
+  max-width: var(--container-wide);
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+}
+
+.container-narrow {
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  padding-inline: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .container,
+  .container-wide,
+  .container-narrow {
+    padding-inline: var(--space-5);
+  }
+}
+
+/* ---- Section ---- */
+.section {
+  padding-block: var(--section-pad-y);
+  position: relative;
+}
+
+.section-sm {
+  padding-block: var(--space-16);
+}
+
+.section-lg {
+  padding-block: calc(var(--section-pad-y) * 1.5);
+}
+
+/* ---- Section Header ---- */
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-16);
+}
+
+.section-header .text-overline {
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-5);
+}
+
+.section-header p {
+  max-width: 560px;
+  margin-inline: auto;
+  color: var(--color-text-secondary);
+  line-height: var(--leading-relaxed);
+}
+
+.section-divider {
+  width: 48px;
+  height: 2px;
+  background: var(--gradient-sage);
+  margin: var(--space-5) auto;
+  border-radius: 1px;
+}
+
+/* ---- Grid ---- */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-8); }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-8); }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-6); }
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 { grid-template-columns: 1fr; }
+}
+
+/* ---- Flex ---- */
+.flex       { display: flex; }
+.flex-col   { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-4      { gap: var(--space-4); }
+.gap-6      { gap: var(--space-6); }
+.gap-8      { gap: var(--space-8); }
+
+/* ---- Utilities ---- */
+.relative { position: relative; }
+.overflow-hidden { overflow: hidden; }
+.text-center { text-align: center; }
+.w-full { width: 100%; }
+.h-full { height: 100%; }
+
+/* ---- Gold Accent Line (decorative) ---- */
+.gold-line {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: var(--gradient-gold);
+  margin-bottom: var(--space-6);
+}
+
+/* ---- Glass Card ---- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: var(--radius-lg);
+}
+
+/* ---- Fade-in animation utility ---- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- Page wrapper ---- */
+.page-wrapper {
+  min-height: 100vh;
+  background: var(--color-bg);
+}
+
+/* ---- Page Hero (inner pages) ---- */
+.page-hero {
+  padding-top: calc(var(--header-height) + var(--space-20));
+  padding-bottom: var(--space-20);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-gold-glow);
+  pointer-events: none;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-sage-dark);
+}

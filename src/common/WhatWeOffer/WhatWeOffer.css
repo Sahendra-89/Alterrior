@@ -1,0 +1,171 @@
+/* ================================================
+   WHAT WE OFFER — Swipeable Carousel
+   ================================================ */
+
+.wwo-section {
+  width: 100%;
+}
+
+.wwo-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: var(--space-8);
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+.wwo-title {
+  font-family: var(--font-heading);
+  font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+}
+
+.wwo-sub {
+  color: var(--color-text-muted);
+  font-size: var(--text-base);
+}
+
+.wwo-quote-btn {
+  padding: 12px 28px;
+  background: var(--color-sage-dark);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-base);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.wwo-quote-btn:hover {
+  background: var(--color-sage);
+}
+
+/* Carousel */
+.wwo-carousel-wrap {
+  position: relative;
+}
+
+.wwo-track {
+  display: flex;
+  gap: var(--space-5);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: var(--space-2);
+}
+
+.wwo-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cards */
+.wwo-card {
+  flex: 0 0 280px;
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  scroll-snap-align: start;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base), transform var(--transition-slow);
+}
+
+.wwo-card:hover {
+  border-color: rgba(92,122,101,0.35);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.wwo-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.wwo-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.wwo-card-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 400;
+  color: var(--color-text-primary);
+}
+
+/* List */
+.wwo-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+.wwo-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+}
+
+.wwo-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-sage);
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+/* Arrow buttons */
+.wwo-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+  transition: all var(--transition-base);
+  color: var(--color-text-primary);
+}
+
+.wwo-arrow:hover {
+  background: var(--color-sage-dark);
+  color: #fff;
+  border-color: var(--color-sage-dark);
+}
+
+.wwo-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.wwo-arrow-left { left: -16px; }
+.wwo-arrow-right { right: -16px; }
+
+@media (max-width: 768px) {
+  .wwo-header { align-items: flex-start; }
+  .wwo-card { flex: 0 0 260px; }
+  .wwo-arrow { display: none; }
+}

@@ -1,0 +1,321 @@
+/* ================================================
+   LEAD FORM — Multi-step Quiz Card
+   ================================================ */
+
+.lf-card {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 28px 28px 22px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.lf-progress-ring {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+}
+
+.lf-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-2);
+  line-height: 1.2;
+}
+
+.lf-subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-5);
+}
+
+/* BHK Grid */
+.lf-bhk-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.lf-bhk-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 8px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.lf-bhk-btn:hover {
+  border-color: var(--color-sage);
+  background: var(--color-sage-bg);
+}
+
+.lf-bhk-btn.selected {
+  border-color: var(--color-sage-dark);
+  background: var(--color-sage-muted);
+  color: var(--color-sage-dark);
+  font-weight: 600;
+}
+
+.lf-bhk-icon {
+  font-size: 1.5rem;
+}
+
+/* Rooms List */
+.lf-rooms-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.lf-room-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 12px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-base);
+}
+
+.lf-room-btn:hover {
+  border-color: var(--color-sage);
+  background: var(--color-sage-bg);
+}
+
+.lf-room-btn.selected {
+  border-color: var(--color-sage-dark);
+  background: var(--color-sage-muted);
+  color: var(--color-sage-dark);
+  font-weight: 600;
+}
+
+.lf-check {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+  transition: background var(--transition-base);
+}
+
+.lf-room-btn.selected .lf-check {
+  background: var(--color-sage-dark);
+  color: #fff;
+}
+
+/* Contact form */
+.lf-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.lf-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  outline: none;
+  transition: border-color var(--transition-base);
+}
+
+.lf-input:focus {
+  border-color: var(--color-sage-dark);
+}
+
+.lf-input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.lf-phone-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+  transition: border-color var(--transition-base);
+}
+
+.lf-phone-row:focus-within {
+  border-color: var(--color-sage-dark);
+}
+
+.lf-phone-flag {
+  padding: 12px 10px 12px 14px;
+  font-size: var(--text-sm);
+  color: var(--color-text-secondary);
+  border-right: 1px solid var(--color-border);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.lf-phone-input {
+  border: none !important;
+  border-radius: 0 !important;
+  flex: 1;
+}
+
+.lf-phone-input:focus {
+  border-color: transparent !important;
+}
+
+/* Buttons */
+.lf-next-btn,
+.lf-submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: var(--color-sage-dark);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-base);
+}
+
+.lf-next-btn:hover,
+.lf-submit-btn:hover {
+  background: var(--color-sage);
+}
+
+.lf-btn-row {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-1);
+}
+
+.lf-btn-row .lf-next-btn,
+.lf-btn-row .lf-submit-btn {
+  flex: 1;
+}
+
+.lf-back-btn {
+  flex: 0 0 auto;
+  padding: 14px 18px;
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.lf-back-btn:hover {
+  border-color: var(--color-sage);
+  color: var(--color-sage-dark);
+}
+
+.lf-error {
+  font-size: var(--text-xs);
+  color: var(--color-error);
+  margin-bottom: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(192, 57, 43, 0.06);
+  border-radius: var(--radius-sm);
+}
+
+.lf-disclaimer {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-top: var(--space-3);
+  line-height: 1.5;
+}
+
+.lf-disclaimer a {
+  color: var(--color-sage-dark);
+  text-decoration: underline;
+}
+
+/* Success State */
+.lf-success {
+  text-align: center;
+  padding: 40px 28px;
+}
+
+.lf-success-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--color-sage-dark);
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+  animation: popIn 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lf-success h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-primary);
+}
+
+.lf-success p {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+}
+
+.lf-close-success {
+  padding: 10px 28px;
+  background: var(--color-sage-dark);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition-base);
+}
+
+.lf-close-success:hover {
+  background: var(--color-sage);
+}
