@@ -1,16 +1,16 @@
-import './TrustStrip.css';
+import "./TrustStrip.css";
 
 const TRUST_ITEMS = [
-  { icon: '🏆', label: 'Best Interior Studio 2024' },
-  { icon: '⭐', label: '4.9/5 Google Rating' },
-  { icon: '🛡️', label: '5-Year Design Warranty' },
-  { icon: '📰', label: 'Featured in Architectural Digest' },
-  { icon: '✅', label: 'ISO 9001 Certified' },
-  { icon: '🎖️', label: 'Award Winning Designers' },
-  { icon: '🌿', label: 'Eco-Friendly Materials' },
-  { icon: '📦', label: 'On-Time Delivery Guarantee' },
-  { icon: '💬', label: '98% Client Satisfaction' },
-  { icon: '🏗️', label: '350+ Projects Delivered' },
+  { icon: "🏆", label: "Best Interior Studio 2024" },
+  { icon: "⭐", label: "4.9/5 Google Rating" },
+  { icon: "🛡️", label: "10-Year Design Warranty" },
+  { icon: "📰", label: "Featured in Architectural Digest" },
+  { icon: "✅", label: "ISO 9001 Certified" },
+  { icon: "🎖️", label: "Award Winning Designers" },
+  { icon: "🌿", label: "Eco-Friendly Materials" },
+  { icon: "📦", label: "On-Time Delivery Guarantee" },
+  { icon: "💬", label: "98% Client Satisfaction" },
+  { icon: "🏗️", label: "350+ Projects Delivered" },
 ];
 
 // Duplicate for seamless loop

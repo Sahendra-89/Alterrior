@@ -42,8 +42,47 @@
 }
 
 .header-logo img {
-  height: 48px;
+  height: 64px;
   width: auto;
+  mix-blend-mode: multiply;
+}
+
+.header-logo-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 12px;
+}
+
+.brand-name {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  border-bottom: 1.5px solid #a82424;
+  padding-bottom: 2px;
+  margin-bottom: 2px;
+}
+
+.brand-altera {
+  color: #a82424; /* deep red */
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.brand-interior {
+  color: #333333; /* dark grey/black */
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.brand-tagline {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 10px;
+  color: #555555;
+  text-transform: lowercase;
+  letter-spacing: 1px;
 }
 
 /* ---- Nav ---- */
@@ -55,9 +94,9 @@
 
 .nav-link {
   font-size: var(--text-sm);
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: var(--tracking-wide);
-  color: var(--color-text-secondary);
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
   position: relative;
@@ -173,8 +212,8 @@
 .mobile-nav-link {
   font-family: var(--font-heading);
   font-size: var(--text-4xl);
-  font-weight: 300;
-  color: var(--color-text-primary);
+  font-weight: bold;
+  color: black;
   text-decoration: none;
   letter-spacing: var(--tracking-tight);
   transition: color var(--transition-base);
