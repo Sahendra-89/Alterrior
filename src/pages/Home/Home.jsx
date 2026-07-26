@@ -14,7 +14,7 @@ import "./Home.css";
 
 const STATS = [
   { number: "350+", label: "Projects Delivered" },
-  { number: "10", label: "Years of Excellence" },
+  { number: "10", label: "Years of Experience" },
   { number: "98%", label: "Client Satisfaction" },
   { number: "10", label: "Cities Served" },
 ];
@@ -182,7 +182,7 @@ export default function Home({ onQuoteOpen }) {
               }}
             >
               <h2 className="text-section-title" style={{ marginBottom: 0 }}>
-                Homes for Every Budget
+                Altera Interiors for Every Budget
               </h2>
               <Button
                 variant="primary"
@@ -200,7 +200,7 @@ export default function Home({ onQuoteOpen }) {
               }}
             >
               Our designers work with your requirements and budget to create the
-              perfect home.
+              perfect Altera Interior.
             </p>
           </div>
           <BudgetCarousel />
@@ -249,7 +249,7 @@ export default function Home({ onQuoteOpen }) {
                 <span className="about-badge-text">
                   Years of
                   <br />
-                  Excellence
+                  Experience
                 </span>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function Home({ onQuoteOpen }) {
                 Crafting Spaces with <em>Soul</em>
               </h2>
               <p>
-                Founded in 2010, Altera Interior was born from a simple belief:
+                Founded in 2016, Altera Interior was born from a simple belief:
                 every space has the potential to be extraordinary. We are a
                 boutique studio of passionate designers, artisans, and project
                 managers dedicated to translating your vision into reality.
@@ -282,7 +282,7 @@ export default function Home({ onQuoteOpen }) {
                   "On-time delivery",
                   "Premium material sourcing",
                   "Experienced design team",
-                  "5-year design warranty",
+                  "10-year design warranty",
                 ].map((f) => (
                   <div key={f} className="about-feature">
                     <span className="about-feature-dot" />
@@ -309,12 +309,16 @@ export default function Home({ onQuoteOpen }) {
       <section className="section estimator-section">
         <div className="container">
           <div className="section-header">
-            <span className="text-overline">Interior Price Estimator</span>
-            <h2 className="text-section-title">Calculate Your Design Budget</h2>
+            <span className="text-overline">
+              Altera Interior Price Estimator
+            </span>
+            <h2 className="text-section-title">
+              Calculate Your Altera Interior Cost
+            </h2>
             <div className="section-divider" />
             <p>
-              Select your home type, rooms & design quality to get an
-              approximate cost estimate instantly.
+              Select your Altera Interior type, kitchen & design quality to get
+              an approximate cost estimate instantly.
             </p>
           </div>
           <div ref={estimatorRef} className="fade-in">
@@ -349,13 +353,11 @@ export default function Home({ onQuoteOpen }) {
                   to="/portfolio"
                   className="portfolio-item"
                 >
-                  <div
+                  <img
+                    src={project.image || MOSAIC_IMGS[i]}
+                    alt={project.title}
                     className="portfolio-item-bg"
-                    style={{
-                      backgroundImage: `url(${project.image || MOSAIC_IMGS[i]})`,
-                      backgroundSize: "cover",
-                      backgroundPosition: "center",
-                    }}
+                    loading="lazy"
                   />
                   <div className="portfolio-item-overlay">
                     <span className="portfolio-item-tag">

@@ -41,14 +41,7 @@ export default function Header({ onQuoteOpen }) {
             className="header-logo"
             aria-label="Altera Interior - Home"
           >
-            <img src="/assets/logo/altera-logo.jpeg" alt="Altera Interior" />
-            <div className="header-logo-text">
-              <div className="brand-name">
-                <span className="brand-altera">Altera</span>
-                <span className="brand-interior">interior</span>
-              </div>
-              <div className="brand-tagline">the modern home maker</div>
-            </div>
+            <img src="/assets/logo/altera-logo.png" alt="Altera Interior" style={{ height: "45px" }} />
           </Link>
 
           {/* Desktop Nav */}

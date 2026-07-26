@@ -5,6 +5,15 @@ import './Blog.css';
 
 const CATEGORIES = ['All', ...new Set(blogPosts.map(p => p.category))];
 
+const BLOG_IMAGES = [
+  "/assets/portfolio/living-room-luxury.jpg",
+  "/assets/portfolio/kitchen-ivory.jpg",
+  "/assets/portfolio/living-tropical.jpg",
+  "/assets/portfolio/bedroom-dark.jpg",
+  "/assets/portfolio/kitchen-obsidian.jpg",
+  "/assets/portfolio/office-corporate.jpg",
+];
+
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [search, setSearch] = useState('');
@@ -41,10 +50,12 @@ export default function Blog() {
         <section className="section" style={{ paddingBottom: 0 }}>
           <div className="container">
             <Link to="#" className="featured-post">
-              <div
-                className="featured-post-image"
-                style={{ background: `linear-gradient(135deg, ${featured.color} 0%, ${featured.color}99 100%)` }}
-              >
+              <div className="featured-post-image">
+                <img
+                  src={BLOG_IMAGES[(featured.id - 1) % BLOG_IMAGES.length]}
+                  alt={featured.title}
+                  loading="eager"
+                />
                 <div className="featured-post-badge">Featured</div>
               </div>
               <div className="featured-post-content">
@@ -101,11 +112,12 @@ export default function Blog() {
             <div className="blog-grid">
               {filtered.map(post => (
                 <Link key={post.id} to="#" className="blog-card">
-                  <div
-                    className="blog-card-image"
-                    style={{ background: `linear-gradient(135deg, ${post.color} 0%, ${post.color}aa 100%)` }}
-                  >
-                    <span className="blog-card-icon">✍</span>
+                  <div className="blog-card-image">
+                    <img
+                      src={BLOG_IMAGES[(post.id - 1) % BLOG_IMAGES.length]}
+                      alt={post.title}
+                      loading="lazy"
+                    />
                   </div>
                   <div className="blog-card-body">
                     <div className="blog-card-meta">

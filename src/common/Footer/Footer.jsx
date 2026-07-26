@@ -31,7 +31,11 @@ export default function Footer({ onQuoteOpen }) {
           {/* Brand */}
           <div className="footer-brand">
             <Link to="/" className="footer-logo">
-              <img src="/assets/logo/altera-logo.jpeg" alt="Altera Interior" />
+              <img
+                src="/assets/logo/altera-logo.png"
+                alt="Altera Interior"
+                style={{ height: "60px" }}
+              />
             </Link>
             <p className="footer-tagline">
               Crafting extraordinary living spaces with precision, passion, and
@@ -39,7 +43,7 @@ export default function Footer({ onQuoteOpen }) {
             </p>
             <div className="footer-social" aria-label="Social media links">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/alterainterior?igsh=MW95cHdtOTVraXZ1Zg%3D%3D&utm_source=qr"
                 className="social-link"
                 aria-label="Instagram"
                 target="_blank"

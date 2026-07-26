@@ -119,5 +119,5 @@
   --container-max:    1280px;
   --container-wide:   1440px;
   --header-height:    80px;
-  --section-pad-y:    var(--space-24);
+  --section-pad-y:    var(--space-12);
 }

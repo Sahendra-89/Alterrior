@@ -146,33 +146,18 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Map Placeholder */}
+              {/* Map */}
               <div className="contact-map">
-                <div className="contact-map-inner">
-                  <span style={{ fontSize: "2.5rem" }}>🗺️</span>
-                  <p
-                    style={{
-                      color: "var(--color-text-muted)",
-                      fontSize: "var(--text-sm)",
-                      marginTop: "var(--space-3)",
-                    }}
-                  >
-                    Gurugram (HR) - 122006
-                  </p>
-                  <a
-                    href="https://maps.google.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="contact-link"
-                    style={{
-                      marginTop: "var(--space-3)",
-                      display: "block",
-                      fontSize: "var(--text-sm)",
-                    }}
-                  >
-                    Open in Google Maps →
-                  </a>
-                </div>
+                <iframe
+                  title="Altera Interior Studio Map Location"
+                  src="https://maps.google.com/maps?q=Behind%20Ats%20Triputi%20Tower%2C%20Dawrka%20Expresway%2C%20Sector%20-%20104%2C%20Gurugram%20Haryana&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, display: "block" }}
+                  allowFullScreen=""
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
               </div>
             </div>
 

@@ -7,7 +7,7 @@ const TESTIMONIALS = [
     name: "Priya & Rahul Sharma",
     location: "Gurgaon, Delhi NCR",
     quote:
-      '"The Altera team transformed our 3BHK into a dream home. The project manager was proactive and delivered everything on time — exactly as we envisioned."',
+      '"The Altera team transformed our home into a dream space. The project manager was proactive, communication was excellent, and every detail was completed on time. The quality of work exceeded our expectations, and the entire experience was smooth from start to finish. Highly recommended!"',
     bg: "linear-gradient(135deg, #7A9E84 0%, #4A6B55 100%)",
     avatar: "👩‍👨",
   },

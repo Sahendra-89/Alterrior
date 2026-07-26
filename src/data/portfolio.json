@@ -16,17 +16,17 @@
   },
   {
     "id": 2,
-    "title": "The Onyx Suite",
+    "title": "The Ivory Suite",
     "category": "Bedroom",
-    "slug": "the-onyx-suite",
+    "slug": "the-ivory-suite",
     "location": "Delhi, NCR",
     "year": 2024,
     "area": "1,800 sq ft",
-    "tags": ["Minimalist", "Dark Luxury", "Bespoke"],
-    "description": "A master bedroom retreat draped in deep charcoal and onyx tones, with a custom headboard, built-in wardrobe, and a private reading alcove.",
+    "tags": ["Minimalist", "Warm Luxury", "Bespoke"],
+    "description": "A master bedroom retreat draped in warm ivory and beige tones, with a custom fluted headboard, built-in wardrobe, and abundant natural light.",
     "image": "/assets/portfolio/bedroom-dark.jpg",
-    "color": "#1C1C28",
-    "accentColor": "#E8C898",
+    "color": "#EDE8E0",
+    "accentColor": "#A08060",
     "featured": true
   },
   {
@@ -57,7 +57,7 @@
     "image": "/assets/portfolio/office-corporate.jpg",
     "color": "#1E2830",
     "accentColor": "#C9A96E",
-    "featured": true
+    "featured": false
   },
   {
     "id": 5,
@@ -162,7 +162,7 @@
     "image": "/assets/portfolio/bedroom-coastal.jpg",
     "color": "#1A2C3A",
     "accentColor": "#C9A96E",
-    "featured": false
+    "featured": true
   },
   {
     "id": 12,

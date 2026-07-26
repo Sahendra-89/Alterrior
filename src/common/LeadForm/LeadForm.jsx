@@ -2,11 +2,13 @@ import { useState } from "react";
 import "./LeadForm.css";
 
 const BHK_OPTIONS = [
-  { id: "1bhk", label: "1 BHK", icon: "🏠" },
-  { id: "2bhk", label: "2 BHK", icon: "🏡" },
-  { id: "3bhk", label: "3 BHK", icon: "🏘️" },
-  { id: "4bhk", label: "4 BHK+", icon: "🏰" },
-  { id: "villa", label: "Villa", icon: "🏯" },
+  { id: "kitchen", label: "Modular kitchen", icon: "🍳" },
+  { id: "wardrobes", label: "Modular wardrobes", icon: "👔" },
+  { id: "furniture", label: "Furniture", icon: "🛋️" },
+  { id: "vanity", label: "Vanity", icon: "🪞" },
+  { id: "study", label: "Study table", icon: "📚" },
+  { id: "door", label: "Modular door with modular frames", icon: "🚪" },
+  { id: "crockery", label: "Crockery unit", icon: "🍽️" },
 ];
 
 const ROOM_OPTIONS = [
@@ -93,7 +95,7 @@ export default function LeadForm({ onClose }) {
 
   const handleNext = () => {
     if (step === 1 && !selected.bhk) {
-      setError("Please select your home type.");
+      setError("Please select your design requirement.");
       return;
     }
     if (step === 2 && selected.rooms.length === 0) {
@@ -139,8 +141,8 @@ export default function LeadForm({ onClose }) {
 
       {step === 1 && (
         <>
-          <h3 className="lf-title">What type of home?</h3>
-          <p className="lf-subtitle">Select your home configuration</p>
+          <h3 className="lf-title">What type of Altera Interior?</h3>
+          <p className="lf-subtitle">Select your design requirement</p>
           <div className="lf-bhk-grid">
             {BHK_OPTIONS.map((opt) => (
               <button
@@ -170,7 +172,7 @@ export default function LeadForm({ onClose }) {
 
       {step === 2 && (
         <>
-          <h3 className="lf-title">Which rooms to design?</h3>
+          <h3 className="lf-title">Which Altera Interior services?</h3>
           <p className="lf-subtitle">Select all that apply</p>
           <div className="lf-rooms-list">
             {ROOM_OPTIONS.map((room) => (

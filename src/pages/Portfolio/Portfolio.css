@@ -18,7 +18,7 @@
   border: 1px solid var(--color-border);
   color: var(--color-text-muted);
   font-size: var(--text-sm);
-  font-weight: 400;
+  font-weight: 600;
   cursor: pointer;
   transition: all var(--transition-base);
   letter-spacing: var(--tracking-wide);
@@ -83,17 +83,17 @@
 .portfolio-card-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.15) 55%, transparent 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 40%);
   padding: var(--space-5);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  opacity: 0.85;
-  transition: opacity var(--transition-base);
+  opacity: 1;
+  transition: all var(--transition-base);
 }
 
 .portfolio-card:hover .portfolio-card-overlay {
-  opacity: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.2) 0%, transparent 45%);
 }
 
 .portfolio-card-top {
@@ -125,7 +125,7 @@
 .portfolio-card-title {
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
-  font-weight: 400;
+  font-weight: 700;
   color: var(--color-text-primary);
   margin-bottom: var(--space-1);
   line-height: var(--leading-snug);
@@ -241,7 +241,7 @@
 
 .lightbox-title {
   font-size: var(--text-3xl);
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .lightbox-location {

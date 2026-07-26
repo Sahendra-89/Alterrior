@@ -1,6 +1,6 @@
 import './WhatsAppCTA.css';
 
-const WHATSAPP_NUMBER = '+919876543210';
+const WHATSAPP_NUMBER = '+91 9650136952';
 const WHATSAPP_MSG = encodeURIComponent(
   "Hello Altera Interior! I'm interested in your interior design services. Could you please share more details?"
 );

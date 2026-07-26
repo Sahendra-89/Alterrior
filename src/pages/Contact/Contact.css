@@ -64,7 +64,7 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
   overflow: hidden;
-  height: 200px;
+  height: 300px;
 }
 
 .contact-map-inner {

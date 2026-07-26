@@ -27,6 +27,17 @@
   display: flex;
   align-items: flex-start;
   padding: var(--space-5);
+  overflow: hidden;
+}
+
+.featured-post-image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
 .featured-post-badge {
@@ -38,6 +49,8 @@
   text-transform: uppercase;
   padding: var(--space-1) var(--space-3);
   border-radius: var(--radius-full);
+  position: relative;
+  z-index: 1;
 }
 
 .featured-post-content {
@@ -65,18 +78,20 @@
 
 .blog-date {
   font-size: var(--text-xs);
+  font-weight: 600;
   color: var(--color-text-muted);
 }
 
 .blog-read {
   font-size: var(--text-xs);
+  font-weight: 600;
   color: var(--color-text-muted);
 }
 
 .featured-title {
   font-family: var(--font-heading);
   font-size: clamp(var(--text-2xl), 3vw, var(--text-4xl));
-  font-weight: 400;
+  font-weight: 700;
   line-height: var(--leading-snug);
   transition: color var(--transition-base);
 }
@@ -87,6 +102,7 @@
 
 .featured-excerpt {
   font-size: var(--text-sm);
+  font-weight: 500;
   color: var(--color-text-secondary);
   line-height: var(--leading-relaxed);
   display: -webkit-box;
@@ -179,20 +195,20 @@
 
 .blog-card-image {
   height: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform var(--transition-slow);
+  position: relative;
   overflow: hidden;
 }
 
-.blog-card:hover .blog-card-image {
-  transform: scale(1.03);
+.blog-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform var(--transition-slow);
 }
 
-.blog-card-icon {
-  font-size: 3rem;
-  opacity: 0.25;
+.blog-card:hover .blog-card-image img {
+  transform: scale(1.06);
 }
 
 .blog-card-body {
@@ -212,7 +228,7 @@
 .blog-card-title {
   font-family: var(--font-heading);
   font-size: var(--text-xl);
-  font-weight: 400;
+  font-weight: 600;
   line-height: var(--leading-snug);
   transition: color var(--transition-base);
 }
@@ -223,6 +239,7 @@
 
 .blog-card-excerpt {
   font-size: var(--text-sm);
+  font-weight: 500;
   color: var(--color-text-muted);
   line-height: var(--leading-relaxed);
   flex: 1;

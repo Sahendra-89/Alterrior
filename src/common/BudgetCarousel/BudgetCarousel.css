@@ -53,8 +53,13 @@
 .bc-card-darken {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.28);
+  background: rgba(0, 0, 0, 0.35);
   z-index: 1;
+  transition: background var(--transition-slow);
+}
+
+.bc-card:hover .bc-card-darken {
+  background: rgba(0, 0, 0, 0.12);
 }
 
 /* Price badge top-left */
@@ -95,11 +100,12 @@
 }
 
 .bc-label {
-  font-family: var(--font-heading);
-  font-size: var(--text-2xl);
-  font-weight: 400;
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  font-weight: 700;
   color: #fff;
-  line-height: 1.1;
+  line-height: 1.2;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 /* Arrow buttons */

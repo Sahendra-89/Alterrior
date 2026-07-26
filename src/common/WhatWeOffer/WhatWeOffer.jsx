@@ -13,7 +13,6 @@ const OFFER_CARDS = [
       "Study Tables",
       "Vanity",
       "Modular door with modular frame",
-      "False ceiling",
       "Crockery unit",
     ],
   },
@@ -89,7 +88,8 @@ export default function WhatWeOffer({ onQuoteOpen }) {
         <div>
           <h2 className="wwo-title">What We Offer</h2>
           <p className="wwo-sub">
-            Everything you need for your perfect home — under one roof
+            Everything you need for your perfect Altera Interior — under one
+            roof
           </p>
         </div>
         <button className="wwo-quote-btn" onClick={onQuoteOpen}>
