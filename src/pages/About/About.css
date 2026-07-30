@@ -13,7 +13,7 @@
 .about-hero .text-section-title,
 .about-hero .text-lead,
 .about-hero .text-overline {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .about-hero .text-lead {
