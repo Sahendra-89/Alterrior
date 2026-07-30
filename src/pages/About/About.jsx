@@ -91,7 +91,9 @@ export default function About({ onQuoteOpen }) {
           <h1 className="text-section-title">
             A Studio Built on
             <br />
-            <em style={{ fontStyle: "italic", color: "var(--color-gold)" }}>
+            <em
+              style={{ fontStyle: "italic", color: "var(--color-tan-light)" }}
+            >
               Passion & Craft
             </em>
           </h1>
@@ -113,7 +115,8 @@ export default function About({ onQuoteOpen }) {
               <div
                 className="about-story-img"
                 style={{
-                  backgroundImage: "url(/assets/portfolio/living-room-luxury.jpg)",
+                  backgroundImage:
+                    "url(/assets/portfolio/living-room-luxury.jpg)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -121,7 +124,8 @@ export default function About({ onQuoteOpen }) {
               <div
                 className="about-story-accent"
                 style={{
-                  backgroundImage: "url(/assets/portfolio/dining-terracotta.jpg)",
+                  backgroundImage:
+                    "url(/assets/portfolio/dining-terracotta.jpg)",
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                 }}
@@ -257,37 +261,6 @@ export default function About({ onQuoteOpen }) {
                 </h5>
                 <p className="team-role">{role}</p>
                 <p className="team-bio">{bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ---- Awards ---- */}
-      <section className="section about-awards-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="text-overline">Recognition</span>
-            <h2 className="text-section-title">Awards & Accolades</h2>
-            <div className="section-divider" />
-          </div>
-          <div className="awards-list">
-            {AWARDS.map(({ year, title, body }) => (
-              <div key={title} className="award-item">
-                <span className="award-year">{year}</span>
-                <div className="award-divider" />
-                <div className="award-info">
-                  <h5 style={{ fontSize: "var(--text-lg)" }}>{title}</h5>
-                  <p
-                    style={{
-                      fontSize: "var(--text-sm)",
-                      color: "var(--color-gold)",
-                    }}
-                  >
-                    {body}
-                  </p>
-                </div>
-                <span className="award-trophy">🏆</span>
               </div>
             ))}
           </div>

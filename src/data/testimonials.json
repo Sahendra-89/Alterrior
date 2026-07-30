@@ -13,7 +13,6 @@
     "id": 2,
     "name": "Rahul & Anita Khanna",
     "location": "Delhi, NCR",
-    "project": "The Onyx Suite",
     "rating": 5,
     "quote": "We've worked with many designers, but Altera is on a different level entirely. The Onyx Suite bedroom is beyond what we imagined — pure luxury, perfectly functional. Worth every rupee.",
     "initials": "RK",
@@ -22,8 +21,7 @@
   {
     "id": 3,
     "name": "Vikram Mehta",
-    "location": "Bangalore, Karnataka",
-    "project": "Ivory Kitchen",
+    "location": "Gurgram",
     "rating": 5,
     "quote": "The kitchen redesign was seamless from concept to completion. Altera's project management is exceptional — on time, on budget, and the result is jaw-droppingly beautiful.",
     "initials": "VM",

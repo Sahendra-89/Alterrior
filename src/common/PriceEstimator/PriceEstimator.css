@@ -98,6 +98,135 @@
   font-weight: 600;
 }
 
+/* Layout Cards */
+.pe-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.pe-layout-card {
+  position: relative;
+  background: var(--color-surface-2);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 70px;
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.pe-layout-card:hover {
+  border-color: var(--color-sage);
+}
+
+.pe-layout-card.active {
+  border-color: var(--color-sage-dark);
+  background: var(--color-sage-muted);
+}
+
+.pe-layout-radio {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: #fff;
+  transition: all var(--transition-base);
+}
+
+.pe-layout-card.active .pe-layout-radio {
+  border-color: var(--color-sage-dark);
+  background: var(--color-sage-dark);
+  box-shadow: inset 0 0 0 3px #fff;
+}
+
+.pe-layout-name {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  text-align: center;
+}
+
+.pe-layout-card.active .pe-layout-name {
+  color: var(--color-sage-dark);
+  font-weight: 600;
+}
+
+/* List Cards (e.g. Wardrobe Height) */
+.pe-list-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.pe-list-card:hover {
+  border-color: var(--color-sage);
+}
+
+.pe-list-card.active {
+  border-color: var(--color-sage-dark);
+  background: var(--color-sage-muted);
+}
+
+.pe-list-radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-border);
+  background: #fff;
+  transition: all var(--transition-base);
+}
+
+.pe-list-card.active .pe-list-radio {
+  border-color: var(--color-sage-dark);
+  background: var(--color-sage-dark);
+  box-shadow: inset 0 0 0 4px #fff;
+}
+
+.pe-list-name {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.pe-list-card.active .pe-list-name {
+  color: var(--color-sage-dark);
+  font-weight: 600;
+}
+
+/* Measurement Select */
+.pe-select {
+  padding: 8px 12px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface-2);
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+  cursor: pointer;
+  outline: none;
+  min-width: 100px;
+  appearance: none;
+  /* Add a custom dropdown arrow if desired, or rely on native */
+}
+
+.pe-select:focus {
+  border-color: var(--color-sage);
+}
+
 /* Quality Buttons */
 .pe-quality-tabs {
   display: flex;

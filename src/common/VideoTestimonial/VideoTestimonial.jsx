@@ -4,29 +4,38 @@ import "./VideoTestimonial.css";
 const TESTIMONIALS = [
   {
     id: 1,
-    name: "Priya & Rahul Sharma",
+    name: "Savneet Shergill",
     location: "Gurgaon, Delhi NCR",
     quote:
-      '"The Altera team transformed our home into a dream space. The project manager was proactive, communication was excellent, and every detail was completed on time. The quality of work exceeded our expectations, and the entire experience was smooth from start to finish. Highly recommended!"',
+      '"We had a great experience with this Company. They were very professional and timely . Their work on vanities had a great finish and they were very patient with any changes we wanted till we were completely satisfied. Their rates were competitive and they were very nice to deal with . Highly recommend this Company"',
     bg: "linear-gradient(135deg, #7A9E84 0%, #4A6B55 100%)",
     avatar: "👩‍👨",
   },
   {
     id: 2,
-    name: "Ananya Krishnan",
-    location: "Bangalore, Karnataka",
+    name: "Apurva Sharma",
+    location: "Gurugram, Delhi NCR",
     quote:
-      '"I was skeptical about online interior design, but Altera Interior exceeded every expectation. The 3D renders matched the final outcome perfectly!"',
+      '"I have consulted many other designers and woodwork consultants but none of them were as professional and efficient as Mr. Jitendra and his team. I recently got work for boilo based wardrobe and other living space woodwork. Mr jitendra and his team mate are highly professional and give genuine recommendations and their good services have earned my trust and respect. They completed work before expected. I highly recommend their services for home woodwork"',
     bg: "linear-gradient(135deg, #A08060 0%, #6A5540 100%)",
     avatar: "👩",
   },
   {
     id: 3,
-    name: "Vikram & Sunita Mehta",
-    location: "Mumbai, Maharashtra",
+    name: "Aayushi Yadav",
+    location: "Gurugram, Delhi NCR",
     quote:
-      '"From the first consultation to the final handover, the experience was seamless. Our modular kitchen is stunning and incredibly functional."',
+      '"  We worked with Jitender and his team at Altera Interiors for our home, and the experience has been wonderful. From planning to execution, they paid great attention to detail, kept timelines in check, and were always approachable for any concerns or changes. Jitender personally ensured quality and smooth coordination, which made the entire journey stress-free for us.Thanks to their hard work, our dream home has come to life beautifully. Highly recommend Altera Interiors for anyone looking for reliable, creative and professional interior solutions"',
     bg: "linear-gradient(135deg, #6B8E77 0%, #3D5445 100%)",
+    avatar: "👨",
+  },
+  {
+    id: 4,
+    name: "Vinod Sahu",
+    location: "Gurugram, Delhi NCR",
+    quote:
+      '"Genuine company with own in-house manufacturing setup. Good experienced staff, finish of work is upto the mark. Promoter is down to earth person, having skilled knowledge of his field. Must use his services if actually required good work with competitive price."',
+    bg: "linear-gradient(135deg, #8B4513 0%, #5D2906 100%)",
     avatar: "👨",
   },
 ];

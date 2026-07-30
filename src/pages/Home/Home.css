@@ -37,12 +37,11 @@
   background: var(--color-surface);
 }
 
-/* ---- Hero ---- */
 .hero {
   position: relative;
   height: calc(100vh - var(--header-height));
-  min-height: 560px;
-  max-height: 820px;
+  min-height: 640px;
+  max-height: 900px;
   display: flex;
   align-items: stretch;
   overflow: hidden;
@@ -58,7 +57,7 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--space-16) var(--space-12) var(--space-16) var(--space-12);
-  width: 38%;
+  width: 32%;
   flex-shrink: 0;
   background: var(--color-bg);
 }

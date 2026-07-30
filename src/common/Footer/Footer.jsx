@@ -34,7 +34,7 @@ export default function Footer({ onQuoteOpen }) {
               <img
                 src="/assets/logo/altera-logo.png"
                 alt="Altera Interior"
-                style={{ height: "60px" }}
+                style={{ height: "75px" }}
               />
             </Link>
             <p className="footer-tagline">

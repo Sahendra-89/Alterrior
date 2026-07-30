@@ -1,83 +1,71 @@
-/* ================================================
-   TRUST STRIP — Infinite Marquee
-   ================================================ */
-
 .trust-strip {
-  background: var(--color-surface);
+  background: var(--color-surface-2);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
-  padding-block: var(--space-4);
-  overflow: hidden;
-  position: relative;
+  padding: var(--space-6) 0;
 }
 
-/* Fade edges */
-.trust-strip::before,
-.trust-strip::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 120px;
-  z-index: 2;
-  pointer-events: none;
-}
-
-.trust-strip::before {
-  left: 0;
-  background: linear-gradient(to right, var(--color-surface), transparent);
-}
-
-.trust-strip::after {
-  right: 0;
-  background: linear-gradient(to left, var(--color-surface), transparent);
-}
-
-.trust-track {
-  display: flex;
-  align-items: center;
-  gap: var(--space-10);
-  width: max-content;
-  animation: marqueeScroll 28s linear infinite;
-}
-
-.trust-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes marqueeScroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+.trust-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-6);
 }
 
 .trust-item {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
-  white-space: nowrap;
-  flex-shrink: 0;
+  gap: var(--space-4);
+  justify-content: center;
 }
 
 .trust-icon {
-  font-size: 1.2rem;
+  font-size: 2rem;
+  background: #fff;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
 }
 
-.trust-label {
+.trust-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-title {
   font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-text-secondary);
-  letter-spacing: 0.01em;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
 }
 
-/* Divider dot between items */
-.trust-item::after {
-  content: '•';
-  margin-left: var(--space-10);
-  color: var(--color-sage);
-  opacity: 0.5;
-  font-size: 0.6rem;
+.trust-desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
 }
 
-.trust-item:last-child::after {
-  display: none;
+@media (max-width: 768px) {
+  .trust-strip-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .trust-item {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .trust-strip-grid {
+    grid-template-columns: 1fr;
+  }
+  .trust-item {
+    flex-direction: row;
+    text-align: left;
+    justify-content: flex-start;
+  }
 }

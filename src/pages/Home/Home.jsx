@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 import Button from "../../common/Button/Button";
 import TestimonialSlider from "../../common/TestimonialSlider/TestimonialSlider";
 import LeadForm from "../../common/LeadForm/LeadForm";
-import TrustStrip from "../../common/TrustStrip/TrustStrip";
 import BudgetCarousel from "../../common/BudgetCarousel/BudgetCarousel";
 import PriceEstimator from "../../common/PriceEstimator/PriceEstimator";
 import VideoTestimonial from "../../common/VideoTestimonial/VideoTestimonial";
 import WhatWeOffer from "../../common/WhatWeOffer/WhatWeOffer";
+import TrustStrip from "../../common/TrustStrip/TrustStrip";
 import portfolioData from "../../data/portfolio.json";
 import blogPosts from "../../data/blogPosts.json";
 import "./Home.css";
@@ -147,7 +147,7 @@ export default function Home({ onQuoteOpen }) {
         </div>
       </section>
 
-      {/* ======== TRUST STRIP — Marquee ======== */}
+      {/* ======== TRUST STRIP ======== */}
       <TrustStrip />
 
       {/* ======== STATS BAR ======== */}
@@ -182,7 +182,7 @@ export default function Home({ onQuoteOpen }) {
               }}
             >
               <h2 className="text-section-title" style={{ marginBottom: 0 }}>
-                Altera Interiors for Every Budget
+                Altera Interior for Every Budget
               </h2>
               <Button
                 variant="primary"

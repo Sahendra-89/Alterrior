@@ -41,7 +41,7 @@ export default function Header({ onQuoteOpen }) {
             className="header-logo"
             aria-label="Altera Interior - Home"
           >
-            <img src="/assets/logo/altera-logo.png" alt="Altera Interior" style={{ height: "45px" }} />
+            <img src="/assets/logo/altera-logo.png" alt="Altera Interior" style={{ height: "65px" }} />
           </Link>
 
           {/* Desktop Nav */}

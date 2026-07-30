@@ -108,10 +108,9 @@
 }
 
 .vt-quote-text {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: clamp(1.1rem, 2vw, 1.4rem);
-  font-weight: 300;
-  font-style: italic;
+  font-weight: 400;
   color: var(--color-text-primary);
   line-height: 1.6;
 }
@@ -295,10 +294,9 @@
 }
 
 .vt-modal-quote {
-  font-family: var(--font-heading);
+  font-family: var(--font-body);
   font-size: var(--text-xl);
-  font-style: italic;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--color-text-primary);
   line-height: 1.6;
   margin-bottom: var(--space-5);
