@@ -1,9 +1,8 @@
 [
   {
     "id": 1,
-    "name": "Priya Sharma",
-    "location": "Mumbai, Maharashtra",
-    "project": "Serenity Villa",
+    "name": "Savneet Shergill",
+    "location": "Gurugram",
     "rating": 5,
     "quote": "Altera transformed our house into a home we're proud to show to the world. Every corner tells our story, and the attention to detail is simply unmatched. The team's understanding of our vision was extraordinary.",
     "initials": "PS",
@@ -30,31 +29,10 @@
   {
     "id": 4,
     "name": "Sunita Reddy",
-    "location": "Hyderabad, Telangana",
-    "project": "Corporate Axis",
+    "location": "Gurugram",
     "rating": 5,
     "quote": "Our office was transformed from a generic space into an experience. Employee morale shot up the moment we moved in. Altera understood our brand better than we did.",
     "initials": "SR",
     "color": "#1E2830"
-  },
-  {
-    "id": 5,
-    "name": "Arjun & Kavya Nair",
-    "location": "Kochi, Kerala",
-    "project": "Monsoon Living",
-    "rating": 5,
-    "quote": "Altera brought the beauty of Kerala into our living room while keeping it modern and sophisticated. The outcome is timeless. We receive compliments every single time we have guests.",
-    "initials": "AN",
-    "color": "#2C3828"
-  },
-  {
-    "id": 6,
-    "name": "Deepika Joshi",
-    "location": "Pune, Maharashtra",
-    "project": "Sage Bathroom",
-    "rating": 5,
-    "quote": "I never thought a bathroom could be an emotional experience. Every morning, stepping into the Sage Bathroom feels like checking into a luxury spa. Absolutely transformative work.",
-    "initials": "DJ",
-    "color": "#2A342C"
   }
 ]

@@ -55,7 +55,6 @@ export default function TestimonialSlider() {
           <div className="testimonial-info">
             <span className="testimonial-name">{t.name}</span>
             <span className="testimonial-location">{t.location}</span>
-            <span className="testimonial-project">Project: {t.project}</span>
           </div>
           <div className="testimonial-stars" aria-label={`${t.rating} out of 5 stars`}>
             {Array.from({ length: 5 }).map((_, i) => (

@@ -15,11 +15,19 @@ export default function Portfolio() {
   return (
     <main className="page-wrapper">
       {/* Hero */}
-      <section className="page-hero">
-        <div className="container">
-          <span className="text-overline" style={{ display: 'block', marginBottom: 'var(--space-4)' }}>Our Work</span>
-          <h1 className="text-section-title">A Portfolio of<br /><em style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>Transformations</em></h1>
-          <p className="text-lead" style={{ maxWidth: 520, margin: 'var(--space-5) auto 0' }}>
+      <section 
+        className="page-hero"
+        style={{
+          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/portfolio/office-loft.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          color: "white"
+        }}
+      >
+        <div className="container" style={{ position: "relative", zIndex: 1 }}>
+          <span className="text-overline" style={{ display: 'block', marginBottom: 'var(--space-4)', color: 'rgba(255, 255, 255, 0.85)' }}>Our Work</span>
+          <h1 className="text-section-title" style={{ color: 'white' }}>A Portfolio of<br /><em style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>Transformations</em></h1>
+          <p className="text-lead" style={{ maxWidth: 520, margin: 'var(--space-5) auto 0', color: 'rgba(255, 255, 255, 0.9)' }}>
             {portfolioData.length} projects across India — each one a unique story of space, style, and craft.
           </p>
         </div>

@@ -7,7 +7,6 @@ import BudgetCarousel from "../../common/BudgetCarousel/BudgetCarousel";
 import PriceEstimator from "../../common/PriceEstimator/PriceEstimator";
 import VideoTestimonial from "../../common/VideoTestimonial/VideoTestimonial";
 import WhatWeOffer from "../../common/WhatWeOffer/WhatWeOffer";
-import TrustStrip from "../../common/TrustStrip/TrustStrip";
 import portfolioData from "../../data/portfolio.json";
 import blogPosts from "../../data/blogPosts.json";
 import "./Home.css";
@@ -146,9 +145,6 @@ export default function Home({ onQuoteOpen }) {
           </div>
         </div>
       </section>
-
-      {/* ======== TRUST STRIP ======== */}
-      <TrustStrip />
 
       {/* ======== STATS BAR ======== */}
       <section className="stats-bar" aria-label="Company statistics">
@@ -408,27 +404,16 @@ export default function Home({ onQuoteOpen }) {
         </div>
       </section>
 
-      {/* ======== VIDEO TESTIMONIAL ======== */}
-      <section className="section video-testimonial-section">
+      {/* ======== REVIEWS & TESTIMONIALS ======== */}
+      <section className="section testimonials-section">
         <div className="container">
           <div className="section-header">
             <span className="text-overline">Client Stories</span>
             <h2 className="text-section-title">Hear from Our Clients</h2>
             <div className="section-divider" />
           </div>
-          <div ref={videoRef} className="fade-in">
+          <div ref={videoRef} className="fade-in" style={{ marginBottom: "var(--space-12)" }}>
             <VideoTestimonial />
-          </div>
-        </div>
-      </section>
-
-      {/* ======== TESTIMONIAL SLIDER ======== */}
-      <section className="section testimonials-section">
-        <div className="container">
-          <div className="section-header">
-            <span className="text-overline">Reviews</span>
-            <h2 className="text-section-title">What Our Clients Say</h2>
-            <div className="section-divider" />
           </div>
           <TestimonialSlider />
         </div>

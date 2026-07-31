@@ -6,7 +6,7 @@ const BUDGET_CARDS = [
   {
     id: "kitchen",
     label: "Modular Kitchen",
-    price: "Starting at ₹ 20k*",
+    price: "Starting at ₹ 1.5L*",
     image: "/assets/portfolio/modular-kitchen.jpg",
     rooms: "Premium Modular",
   },

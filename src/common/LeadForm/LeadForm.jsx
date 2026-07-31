@@ -21,10 +21,12 @@ const KITCHEN_FINISHES = [
 ];
 
 const WARDROBE_STYLES = [
-  { id: "classic-tv", label: "Classic TV Unit" },
-  { id: "contemporary-tv", label: "Contemporary TV Unit" },
-  { id: "european-tv", label: "European TV Unit" },
-  { id: "modern-tv", label: "Modern TV Unit" },
+  { id: "laminated", label: "Laminated Wardrobe" },
+  { id: "lacquered-glass", label: "Lacquered Glass Wardrobe" },
+  { id: "italian", label: "Italian Wardrobe" },
+  { id: "pu", label: "PU Wardrobe" },
+  { id: "pu-european", label: "PU European Wardrobe" },
+  { id: "veneer", label: "Veneer Wardrobe" },
 ];
 
 const FURNITURE_STYLES = [
@@ -157,7 +159,7 @@ export default function LeadForm({ onClose }) {
       return;
     }
     if (currentView === "wardrobe_style" && !selected.wardrobeStyle) {
-      setError("Please select a TV unit style.");
+      setError("Please select a wardrobe style.");
       return;
     }
     if (currentView === "furniture_style" && !selected.furnitureStyle) {
@@ -301,7 +303,7 @@ export default function LeadForm({ onClose }) {
 
       {currentView === "wardrobe_style" && (
         <>
-          <h3 className="lf-title">Select TV Unit Style</h3>
+          <h3 className="lf-title">Select Wardrobe Style</h3>
           <p className="lf-subtitle">Choose your preferred design</p>
           <div className="lf-rooms-list" style={{ maxHeight: "280px", overflowY: "auto", paddingRight: "4px" }}>
             {WARDROBE_STYLES.map((style) => (
