@@ -7,6 +7,7 @@ import BudgetCarousel from "../../common/BudgetCarousel/BudgetCarousel";
 import PriceEstimator from "../../common/PriceEstimator/PriceEstimator";
 import VideoTestimonial from "../../common/VideoTestimonial/VideoTestimonial";
 import WhatWeOffer from "../../common/WhatWeOffer/WhatWeOffer";
+import TrustStrip from "../../common/TrustStrip/TrustStrip";
 import portfolioData from "../../data/portfolio.json";
 import blogPosts from "../../data/blogPosts.json";
 import "./Home.css";
@@ -104,7 +105,7 @@ export default function Home({ onQuoteOpen }) {
   const videoRef = useFadeIn();
 
   return (
-    <main className="page-wrapper">
+    <main className="page-wrapper home-page">
       {/* ======== HERO — Split Panel ======== */}
       <section className="hero" id="home" aria-label="Hero">
         {/* Left: Text + Lead Form */}
@@ -145,6 +146,9 @@ export default function Home({ onQuoteOpen }) {
           </div>
         </div>
       </section>
+
+      {/* ======== TRUST STRIP ======== */}
+      <TrustStrip />
 
       {/* ======== STATS BAR ======== */}
       <section className="stats-bar" aria-label="Company statistics">

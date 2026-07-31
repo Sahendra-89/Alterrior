@@ -715,19 +715,19 @@
 }
 
 /* ---- Section header overrides ---- */
-.text-overline {
+.home-page .text-overline {
   color: var(--color-text-muted) !important;
 }
 
-.text-section-title {
+.home-page .text-section-title {
   color: var(--color-text-primary) !important;
 }
 
-.section-divider {
+.home-page .section-divider {
   background: var(--color-sage) !important;
 }
 
-.gold-line {
+.home-page .gold-line {
   background: var(--color-sage) !important;
 }
 

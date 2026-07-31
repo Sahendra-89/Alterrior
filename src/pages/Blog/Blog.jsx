@@ -38,16 +38,16 @@ export default function Blog() {
       <section 
         className="page-hero"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/portfolio/living-tropical.jpg')",
+          backgroundImage: "linear-gradient(to bottom, rgba(13, 13, 13, 0.4) 0%, rgba(13, 13, 13, 0.6) 100%), url('/assets/portfolio/living-tropical.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          color: "white"
+          color: "#ffffff"
         }}
       >
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <span className="text-overline" style={{ display: 'block', marginBottom: 'var(--space-4)', color: 'rgba(255, 255, 255, 0.85)' }}>Design Journal</span>
-          <h1 className="text-section-title" style={{ color: 'white' }}>Stories, Ideas &<br /><em style={{ fontStyle: 'italic', color: 'var(--color-gold)' }}>Inspiration</em></h1>
-          <p className="text-lead" style={{ maxWidth: 520, margin: 'var(--space-5) auto 0', color: 'rgba(255, 255, 255, 0.9)' }}>
+          <span className="text-overline" style={{ display: 'block', marginBottom: 'var(--space-4)', color: '#ffffff', opacity: 0.8 }}>Design Journal</span>
+          <h1 className="text-section-title" style={{ color: '#ffffff' }}>Stories, Ideas &<br /><em style={{ fontStyle: 'italic', color: 'var(--color-tan-light)' }}>Inspiration</em></h1>
+          <p className="text-lead" style={{ maxWidth: 520, margin: 'var(--space-5) auto 0', color: '#ffffff', opacity: 0.9 }}>
             Design wisdom, material guides, trend reports, and studio stories — straight from our designers.
           </p>
         </div>

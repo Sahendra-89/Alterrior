@@ -173,7 +173,7 @@ export default function QuoteModal({ isOpen, onClose }) {
                 </div>
                 <div className="form-group">
                   <label className="form-label" htmlFor="modal-size">
-                    Approximate Area
+                    Select your prefered finshed quality
                   </label>
                   <select
                     id="modal-size"

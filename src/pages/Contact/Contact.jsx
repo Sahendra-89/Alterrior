@@ -38,29 +38,29 @@ export default function Contact() {
       <section 
         className="page-hero"
         style={{
-          backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('/assets/portfolio/bedroom-dark.jpg')",
+          backgroundImage: "linear-gradient(to bottom, rgba(13, 13, 13, 0.4) 0%, rgba(13, 13, 13, 0.6) 100%), url('/assets/portfolio/bedroom-dark.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
-          color: "white"
+          color: "#ffffff"
         }}
       >
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
           <span
             className="text-overline"
-            style={{ display: "block", marginBottom: "var(--space-4)", color: "rgba(255, 255, 255, 0.85)" }}
+            style={{ display: "block", marginBottom: "var(--space-4)", color: "#ffffff", opacity: 0.8 }}
           >
             Get in Touch
           </span>
-          <h1 className="text-section-title" style={{ color: "white" }}>
+          <h1 className="text-section-title" style={{ color: "#ffffff" }}>
             Let's Start Your
             <br />
-            <em style={{ fontStyle: "italic", color: "var(--color-gold)" }}>
+            <em style={{ fontStyle: "italic", color: "var(--color-tan-light)" }}>
               Design Journey
             </em>
           </h1>
           <p
             className="text-lead"
-            style={{ maxWidth: 520, margin: "var(--space-5) auto 0", color: "rgba(255, 255, 255, 0.9)" }}
+            style={{ maxWidth: 520, margin: "var(--space-5) auto 0", color: "#ffffff", opacity: 0.9 }}
           >
             Whether you have a project in mind or just want to explore
             possibilities — we'd love to hear from you.

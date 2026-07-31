@@ -45,39 +45,37 @@ const ROOM_COSTS = {
 const QUALITY_MULTIPLIER = {
   essential: {
     label: "Essential",
+    priceRange: "30k to 70k",
     desc: "Clean, functional finishes",
     mult: 1.0,
   },
   premium: {
     label: "Premium",
+    priceRange: "1.1L to 1.5L",
     desc: "Rich textures, quality materials",
     mult: 1.5,
   },
   luxury: {
     label: "Luxury",
+    priceRange: "1.7L to 2.7L",
     desc: "Top-tier finishes & custom pieces",
     mult: 2.2,
   },
 };
 
 function formatINR(amount) {
-  if (amount >= 100000) return `₹${(amount / 100000).toFixed(1)}L`;
+  if (amount >= 100000) return `₹${parseFloat((amount / 100000).toFixed(2))}L`;
   return `₹${(amount / 1000).toFixed(0)}K`;
 }
 
-const KITCHEN_LAYOUTS = [
-  "L-shaped",
-  "Straight",
-  "U-shaped",
-  "Parallel"
-];
+const KITCHEN_LAYOUTS = ["L-shaped", "Straight", "U-shaped", "Parallel"];
 
 const WARDROBE_HEIGHTS = [4, 6, 7, 9];
 const WARDROBE_TYPES = ["Sliding", "Swing"];
 const WARDROBE_FINISHES = [
   { id: "essential", label: "Standard - Laminate" },
   { id: "premium", label: "Premium - Membrane" },
-  { id: "luxury", label: "Luxe - Acrylic" }
+  { id: "luxury", label: "Luxe - Acrylic" },
 ];
 
 export default function PriceEstimator({ onQuoteOpen }) {
@@ -89,13 +87,15 @@ export default function PriceEstimator({ onQuoteOpen }) {
   const [wardrobeType, setWardrobeType] = useState(WARDROBE_TYPES[0]);
 
   let base = BHK_CONFIG[bhk]?.base ?? 350000;
-  
+
   if (bhk === "kitchen") {
     let totalLength = 0;
     if (kitchenLayout === "Straight") totalLength = measurements.A;
-    else if (kitchenLayout === "L-shaped" || kitchenLayout === "Parallel") totalLength = measurements.A + measurements.B;
-    else if (kitchenLayout === "U-shaped") totalLength = measurements.A + measurements.B + measurements.C;
-    
+    else if (kitchenLayout === "L-shaped" || kitchenLayout === "Parallel")
+      totalLength = measurements.A + measurements.B;
+    else if (kitchenLayout === "U-shaped")
+      totalLength = measurements.A + measurements.B + measurements.C;
+
     // Calculate base cost based on total length (approx 9375 per foot to match 1.5L for a 16ft kitchen)
     base = totalLength * 9375;
   } else if (bhk === "wardrobes") {
@@ -103,9 +103,43 @@ export default function PriceEstimator({ onQuoteOpen }) {
     base = wardrobeHeight * 10000;
   }
 
-  const multiplier = QUALITY_MULTIPLIER[quality]?.mult ?? 1.5;
-  const totalMin = Math.round(base * multiplier * 0.85);
-  const totalMax = Math.round(base * multiplier * 1.15);
+  let totalMin = 0;
+  let totalMax = 0;
+
+  if (bhk === "kitchen" && kitchenLayout === "Straight") {
+    if (quality === "essential") {
+      totalMin = 100000;
+      totalMax = 150000;
+    } else if (quality === "premium") {
+      totalMin = 170000;
+      totalMax = 200000;
+    } else if (quality === "luxury") {
+      totalMin = 220000;
+      totalMax = 252000;
+    }
+  } else if (bhk === "vanity") {
+    if (quality === "essential") {
+      totalMin = 10000;
+      totalMax = 19000;
+    } else if (quality === "premium") {
+      totalMin = 22000;
+      totalMax = 35000;
+    } else if (quality === "luxury") {
+      totalMin = 40000;
+      totalMax = 60000;
+    }
+  } else {
+    if (quality === "essential") {
+      totalMin = 30000;
+      totalMax = 70000;
+    } else if (quality === "premium") {
+      totalMin = 110000;
+      totalMax = 150000;
+    } else if (quality === "luxury") {
+      totalMin = 170000;
+      totalMax = 270000;
+    }
+  }
 
   return (
     <div className="pe-wrapper">
@@ -140,32 +174,82 @@ export default function PriceEstimator({ onQuoteOpen }) {
               </div>
 
               <div className="pe-measurements">
-                <label className="pe-label" style={{ marginTop: "16px", display: "block", textTransform: "none", color: "#333", fontSize: "1.1rem" }}>Now review the measurements for accuracy</label>
-                <div className="pe-measurement-inputs" style={{ display: "flex", gap: "16px", marginTop: "12px", flexWrap: "wrap" }}>
-                  <div className="pe-measurement-item" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                <label
+                  className="pe-label"
+                  style={{
+                    marginTop: "16px",
+                    display: "block",
+                    textTransform: "none",
+                    color: "#333",
+                    fontSize: "1.3rem",
+                    fontWeight: "bold",
+                  }}
+                >
+                  Now review the measurements for accuracy
+                </label>
+                <div
+                  className="pe-measurement-inputs"
+                  style={{
+                    display: "flex",
+                    gap: "16px",
+                    marginTop: "12px",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  <div
+                    className="pe-measurement-item"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "8px",
+                    }}
+                  >
                     <span style={{ fontWeight: 600 }}>A</span>
-                    <select 
-                      value={measurements.A} 
-                      onChange={(e) => setMeasurements({...measurements, A: parseInt(e.target.value)})}
+                    <select
+                      value={measurements.A}
+                      onChange={(e) =>
+                        setMeasurements({
+                          ...measurements,
+                          A: parseInt(e.target.value),
+                        })
+                      }
                       className="pe-select"
                     >
                       {[...Array(15)].map((_, i) => (
-                        <option key={i+3} value={i+3}>{i+3}</option>
+                        <option key={i + 3} value={i + 3}>
+                          {i + 3}
+                        </option>
                       ))}
                     </select>
                     <span>ft.</span>
                   </div>
 
-                  {(kitchenLayout === "L-shaped" || kitchenLayout === "Parallel" || kitchenLayout === "U-shaped") && (
-                    <div className="pe-measurement-item" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                  {(kitchenLayout === "L-shaped" ||
+                    kitchenLayout === "Parallel" ||
+                    kitchenLayout === "U-shaped") && (
+                    <div
+                      className="pe-measurement-item"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                    >
                       <span style={{ fontWeight: 600 }}>B</span>
-                      <select 
-                        value={measurements.B} 
-                        onChange={(e) => setMeasurements({...measurements, B: parseInt(e.target.value)})}
+                      <select
+                        value={measurements.B}
+                        onChange={(e) =>
+                          setMeasurements({
+                            ...measurements,
+                            B: parseInt(e.target.value),
+                          })
+                        }
                         className="pe-select"
                       >
                         {[...Array(15)].map((_, i) => (
-                          <option key={i+3} value={i+3}>{i+3}</option>
+                          <option key={i + 3} value={i + 3}>
+                            {i + 3}
+                          </option>
                         ))}
                       </select>
                       <span>ft.</span>
@@ -173,15 +257,29 @@ export default function PriceEstimator({ onQuoteOpen }) {
                   )}
 
                   {kitchenLayout === "U-shaped" && (
-                    <div className="pe-measurement-item" style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    <div
+                      className="pe-measurement-item"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                    >
                       <span style={{ fontWeight: 600 }}>C</span>
-                      <select 
-                        value={measurements.C} 
-                        onChange={(e) => setMeasurements({...measurements, C: parseInt(e.target.value)})}
+                      <select
+                        value={measurements.C}
+                        onChange={(e) =>
+                          setMeasurements({
+                            ...measurements,
+                            C: parseInt(e.target.value),
+                          })
+                        }
                         className="pe-select"
                       >
                         {[...Array(15)].map((_, i) => (
-                          <option key={i+3} value={i+3}>{i+3}</option>
+                          <option key={i + 3} value={i + 3}>
+                            {i + 3}
+                          </option>
                         ))}
                       </select>
                       <span>ft.</span>
@@ -195,7 +293,17 @@ export default function PriceEstimator({ onQuoteOpen }) {
           {bhk === "wardrobes" && (
             <>
               <div className="pe-wardrobe-types" style={{ marginTop: "16px" }}>
-                <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#333", marginBottom: "12px", textAlign: "center" }}>Select the type of wardrobe</h3>
+                <h3
+                  style={{
+                    fontSize: "1.2rem",
+                    fontWeight: 700,
+                    color: "#333",
+                    marginBottom: "12px",
+                    textAlign: "center",
+                  }}
+                >
+                  Select the type of wardrobe
+                </h3>
                 <div className="pe-layout-grid">
                   {WARDROBE_TYPES.map((type) => (
                     <div
@@ -210,42 +318,88 @@ export default function PriceEstimator({ onQuoteOpen }) {
                 </div>
               </div>
 
-              <div className="pe-wardrobe-heights" style={{ marginTop: "32px" }}>
+              <div
+                className="pe-wardrobe-heights"
+                style={{ marginTop: "32px" }}
+              >
                 <div style={{ textAlign: "center", marginBottom: "16px" }}>
-                  <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#333", marginBottom: "12px" }}>What is the height of your wardrobe?</h3>
-                <p style={{ fontSize: "0.85rem", color: "#555", padding: "8px", background: "#f8ebd0", borderRadius: "4px" }}>
-                  Standard size has been set for your convenience
-                </p>
-              </div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                {WARDROBE_HEIGHTS.map((h) => (
-                  <div
-                    key={h}
-                    className={`pe-list-card${wardrobeHeight === h ? " active" : ""}`}
-                    onClick={() => setWardrobeHeight(h)}
+                  <h3
+                    style={{
+                      fontSize: "1.2rem",
+                      fontWeight: 700,
+                      color: "#333",
+                      marginBottom: "12px",
+                    }}
                   >
-                    <div className="pe-list-radio"></div>
-                    <span className="pe-list-name">{h} ft</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pe-wardrobe-finishes" style={{ marginTop: "32px" }}>
-                <h3 style={{ fontSize: "1.2rem", fontWeight: 700, color: "#333", marginBottom: "12px", textAlign: "center" }}>Select your preferred finish</h3>
-                <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-                  {WARDROBE_FINISHES.map((finish) => (
+                    What is the height of your wardrobe?
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.85rem",
+                      color: "#555",
+                      padding: "8px",
+                      background: "#f8ebd0",
+                      borderRadius: "4px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Standard size has been set for your convenience
+                  </p>
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "12px",
+                  }}
+                >
+                  {WARDROBE_HEIGHTS.map((h) => (
                     <div
-                      key={finish.id}
-                      className={`pe-list-card${quality === finish.id ? " active" : ""}`}
-                      onClick={() => setQuality(finish.id)}
+                      key={h}
+                      className={`pe-list-card${wardrobeHeight === h ? " active" : ""}`}
+                      onClick={() => setWardrobeHeight(h)}
                     >
                       <div className="pe-list-radio"></div>
-                      <span className="pe-list-name">{finish.label}</span>
+                      <span className="pe-list-name">{h} ft</span>
                     </div>
                   ))}
                 </div>
+
+                <div
+                  className="pe-wardrobe-finishes"
+                  style={{ marginTop: "32px" }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "1.2rem",
+                      fontWeight: 700,
+                      color: "#333",
+                      marginBottom: "12px",
+                      textAlign: "center",
+                    }}
+                  >
+                    Select your preferred finish
+                  </h3>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "12px",
+                    }}
+                  >
+                    {WARDROBE_FINISHES.map((finish) => (
+                      <div
+                        key={finish.id}
+                        className={`pe-list-card${quality === finish.id ? " active" : ""}`}
+                        onClick={() => setQuality(finish.id)}
+                      >
+                        <div className="pe-list-radio"></div>
+                        <span className="pe-list-name">{finish.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-            </div>
             </>
           )}
         </div>
@@ -253,7 +407,10 @@ export default function PriceEstimator({ onQuoteOpen }) {
         {/* Quality Selector */}
         {bhk !== "wardrobes" && (
           <div className="pe-group">
-            <label className="pe-label">approximate area</label>
+            <label className="pe-label">
+              {" "}
+              Select your prefered finshed quality
+            </label>
             <div className="pe-quality-tabs">
               {Object.entries(QUALITY_MULTIPLIER).map(([key, val]) => (
                 <button
@@ -262,7 +419,7 @@ export default function PriceEstimator({ onQuoteOpen }) {
                   onClick={() => setQuality(key)}
                 >
                   <span className="pe-q-label">{val.label}</span>
-                  <span className="pe-q-desc">{val.desc}</span>
+                  <span className="pe-q-desc" style={{ fontWeight: 'normal' }}>{val.desc}</span>
                 </button>
               ))}
             </div>

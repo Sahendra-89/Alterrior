@@ -13,7 +13,7 @@ const BUDGET_CARDS = [
   {
     id: "wardrobes",
     label: "Modular Wardrobes",
-    price: "Starting at ₹70k*",
+    price: "Starting at ₹30k*",
     image: "/assets/portfolio/modular-wardrobe.jpg",
     rooms: "Bespoke Storage",
   },
@@ -41,7 +41,7 @@ const BUDGET_CARDS = [
   {
     id: "door",
     label: "Modular Door & Frames",
-    price: "Starting at ₹80k*",
+    price: "Starting at ₹30k*",
     image: "/assets/portfolio/modular-door.jpg",
     rooms: "Entrance & Rooms",
   },
